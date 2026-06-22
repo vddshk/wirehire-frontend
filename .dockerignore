@@ -1,0 +1,27 @@
+# Dependencies and build output — rebuilt inside the image.
+node_modules
+.next
+out
+dist
+
+# Local-only tooling.
+.git
+.gitignore
+.claude
+.vscode
+.idea
+
+# Logs and editor artifacts.
+*.log
+npm-debug.log*
+.DS_Store
+
+# Environment files — secrets must come from CI/CD, not the image.
+.env
+.env.local
+.env.*.local
+
+# Docs and meta — not needed at runtime.
+README.md
+*.md
+LICENSE

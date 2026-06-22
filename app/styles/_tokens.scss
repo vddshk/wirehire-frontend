@@ -1,0 +1,37 @@
+// Editorial design tokens — SCSS variables for cross-file reuse.
+// Used by mixins and any future partials; CSS custom properties in
+// globals.scss remain the runtime source of truth for theming.
+
+// Breakpoints — single source of truth for media queries.
+$bp-mobile: 480px;
+$bp-tablet: 860px;
+$bp-tablet-wide: 1100px;
+$bp-desktop: 1280px;
+
+// Editorial color palette — mirrors --ink / --paper / --line-soft tokens
+// so SCSS-time calculations (mix, lighten, opacity) stay consistent
+// with runtime CSS variables.
+$ink: #0b0b0c;
+$paper: #fafaf8;
+$line-soft: #e8e4df;
+$muted: #6b6760;
+
+// Accent — deep wine burgundy, used sparingly for interactive states.
+$accent: #6e2c3e;
+$accent-deep: #522232;
+$accent-soft: #f5ebee;
+$accent-muted: #9a6272;
+
+// Radius — restrained; tables and editorial rules stay square.
+$radius-sm: 5px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// Spacing scale — used by section paddings and grid gaps.
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 16px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 48px;
+$space-7: 64px;

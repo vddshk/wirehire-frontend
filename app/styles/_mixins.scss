@@ -1,0 +1,55 @@
+// Editorial mixins — keep media-query and typography rules DRY.
+
+@use "tokens" as *;
+
+// Responsive helpers — accept a token name, fall back to raw px.
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-wide {
+  @media (max-width: $bp-tablet-wide) {
+    @content;
+  }
+}
+
+// Visually-hidden helper for a11y labels (used in tables with empty <th>).
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Active / selected state — inset accent bar + soft fill, even on all sides.
+@mixin accent-selection($edge: left, $bar: 3px) {
+  background: var(--accent-soft);
+
+  @if $edge == left {
+    box-shadow: inset $bar 0 0 var(--accent);
+  } @else if $edge == top {
+    box-shadow: inset 0 $bar 0 var(--accent);
+  }
+}
+
+// Editorial display title — clamp font-size so it scales with viewport.
+@mixin display-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  font-size: clamp(48px, 8vw, 88px);
+}
