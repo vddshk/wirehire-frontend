@@ -1,4 +1,4 @@
-# <img src="https://github.com/vddshk/wirehire-frontend/blob/main/public/brand-mark.svg" alt="logo" width="24"> [WireHire.ru](https://wirehire.ru)
+# <img src="https://github.com/vddshk/wirehire-frontend/blob/main/public/brand-mark.svg" alt="logo" width="24"> WireHire
 
 Моя дипломная работа.
 
